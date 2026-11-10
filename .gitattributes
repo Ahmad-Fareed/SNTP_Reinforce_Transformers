@@ -9,3 +9,8 @@
 # are part of the assignment package).  Disable end-of-line conversion there.
 # This rule must come last so it overrides the general CSV/Markdown patterns.
 data/** -text
+
+# Binary artifacts must also be stored byte-for-byte.
+*.pdf -text
+*.png -text
+*.pt -text
