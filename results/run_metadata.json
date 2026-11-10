@@ -1,0 +1,23 @@
+{
+  "python": "3.12.10",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "processor": "Intel64 Family 6 Model 158 Stepping 9, GenuineIntel",
+  "cpu_count": 8,
+  "torch": "2.15.0+cpu",
+  "numpy": "2.5.3",
+  "pandas": "2.3.3",
+  "networkx": "3.6.1",
+  "matplotlib": "3.11.2",
+  "device": "cpu",
+  "n_participants": 92,
+  "n_edges": 755,
+  "training_seconds": {
+    "reinforce_mlp_seed7": 8.351279600057751,
+    "reinforce_mlp_seed21": 8.301176599925384,
+    "reinforce_mlp_seed42": 8.450328100007027,
+    "reinforce_transformer_seed7": 23.484413400059566,
+    "reinforce_transformer_seed21": 21.816628300002776,
+    "reinforce_transformer_seed42": 20.007330500055104
+  },
+  "total_pipeline_seconds": 101.14947669999674
+}

@@ -1,0 +1,69 @@
+{
+  "all_passed": true,
+  "required_checks": [
+    "empty_seed_diffusion",
+    "probability_zero_diffusion",
+    "probability_one_diffusion",
+    "diffusion_reproducibility",
+    "duplicate_action_rejection",
+    "five_distinct_selected_participants",
+    "correct_reward_calculation",
+    "zero_probability_for_masked_actions",
+    "finite_training_losses",
+    "finite_training_gradients"
+  ],
+  "checks": {
+    "empty_seed_diffusion": {
+      "passed": true,
+      "details": "empty seeds gave zero spread for diffusion seeds [1, 42, 900000]"
+    },
+    "probability_zero_diffusion": {
+      "passed": true,
+      "details": "p=0 with seeds [0, 5, 10, 20, 30] produced 5 active nodes"
+    },
+    "probability_one_diffusion": {
+      "passed": true,
+      "details": "p=1 reached all 92 participants in the connected graph"
+    },
+    "diffusion_reproducibility": {
+      "passed": true,
+      "details": "identical spreads on repeat runs: {42: 59, 900000: 62, 1234567: 52}"
+    },
+    "duplicate_action_rejection": {
+      "passed": true,
+      "details": "second selection of node 0 raised: participant 0 has already been selected"
+    },
+    "five_distinct_selected_participants": {
+      "passed": true,
+      "details": "five distinct selections [84, 58, 14, 12, 27]; 87 actions left"
+    },
+    "correct_reward_calculation": {
+      "passed": true,
+      "details": "first four rewards were zero; fifth reward 0.673913043478 = 62/92"
+    },
+    "zero_probability_for_masked_actions": {
+      "passed": true,
+      "details": "MLP and Transformer gave exactly zero probability to masked actions"
+    },
+    "finite_training_losses": {
+      "passed": true,
+      "details": "50 finite losses in each of 6 runs; final losses=[('reinforce_mlp', 7, -0.3888190686702728), ('reinforce_mlp', 21, -0.7640386819839478), ('reinforce_mlp', 42, 0.11921578645706177), ('reinforce_transformer', 7, -0.37493109703063965), ('reinforce_transformer', 21, -0.23078200221061707), ('reinforce_transformer', 42, -0.21401552855968475)]"
+    },
+    "finite_training_gradients": {
+      "passed": true,
+      "details": "all gradients finite; maximum pre-clip norms per run=[0.10315074771642685, 0.08079984039068222, 0.05088972672820091, 0.21696780622005463, 0.5977613925933838, 0.3065508008003235]"
+    },
+    "training_protocol": {
+      "passed": true,
+      "details": "6 runs x (1,000 episodes, 50 updates of 20 episodes, correct seeds and baseline)"
+    },
+    "checkpoint_protocol": {
+      "passed": true,
+      "details": "loaded all 6 final checkpoints with architecture metadata"
+    },
+    "evaluation_protocol": {
+      "passed": true,
+      "details": "800 episodes = 8 method/seed groups x 100 common diffusion seeds"
+    }
+  }
+}
