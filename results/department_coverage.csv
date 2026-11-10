@@ -1,0 +1,9 @@
+method,train_seed,episodes,coverage_mean,coverage_std,coverage_min,coverage_max
+degree,-1,100,2.0,0.0,2,2
+reinforce_mlp,7,100,3.0,0.0,3,3
+reinforce_mlp,21,100,4.0,0.0,4,4
+reinforce_mlp,42,100,3.0,0.0,3,3
+reinforce_transformer,7,100,4.0,0.0,4,4
+reinforce_transformer,21,100,2.0,0.0,2,2
+reinforce_transformer,42,100,3.0,0.0,3,3
+random,-1,100,3.09,0.6941901756723441,2,4

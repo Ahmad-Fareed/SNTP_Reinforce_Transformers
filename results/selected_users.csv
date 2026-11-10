@@ -1,0 +1,9 @@
+method,train_seed,selection_order,selected_original_ids,departments,department_coverage,mean_final_spread
+degree,-1,"[84, 58, 14, 12, 27]","[804, 311, 95, 80, 134]","[""DMCT"", ""DSE"", ""DSE"", ""DMCT"", ""DMCT""]",2.0,59.67
+reinforce_mlp,7,"[66, 0, 36, 82, 85]","[499, 15, 185, 786, 819]","[""SRH"", ""DSE"", ""DISQ"", ""DSE"", ""DSE""]",3.0,58.88
+reinforce_mlp,21,"[0, 36, 66, 82, 10]","[15, 185, 499, 786, 66]","[""DSE"", ""DISQ"", ""SRH"", ""DSE"", ""DMCT""]",4.0,58.09
+reinforce_mlp,42,"[13, 71, 26, 89, 17]","[87, 603, 132, 938, 105]","[""SFLE"", ""DSE"", ""DSE"", ""DMCT"", ""DMCT""]",3.0,55.62
+reinforce_transformer,7,"[66, 0, 36, 82, 10]","[499, 15, 185, 786, 66]","[""SRH"", ""DSE"", ""DISQ"", ""DSE"", ""DMCT""]",4.0,58.09
+reinforce_transformer,21,"[84, 58, 14, 12, 27]","[804, 311, 95, 80, 134]","[""DMCT"", ""DSE"", ""DSE"", ""DMCT"", ""DMCT""]",2.0,59.67
+reinforce_transformer,42,"[0, 36, 66, 82, 64]","[15, 185, 499, 786, 494]","[""DSE"", ""DISQ"", ""SRH"", ""DSE"", ""DSE""]",3.0,58.81
+random,-1,varies by episode,varies by episode,varies by episode,3.09,60.24
