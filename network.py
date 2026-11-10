@@ -221,19 +221,19 @@ def plot_network_analysis(
     figures_dir: Path,
 ) -> Path:
     """Draw one readable department-coloured network with major hubs labelled."""
-    original_id = dict(zip(nodes["node_id"], nodes["original_id"]))
     dept_of = dict(zip(departments["node_id"], departments["department"]))
     colors = _department_colors(departments)
     node_colors = [colors[dept_of[node]] for node in graph.nodes()]
     degrees = dict(graph.degree())
-    node_sizes = [70 + 18 * degrees[node] for node in graph.nodes()]
+    node_sizes = [40 + 10 * degrees[node] for node in graph.nodes()]
 
     # A fixed seed keeps the figure reproducible.
     positions = nx.spring_layout(graph, seed=42, k=0.42, iterations=300, weight=None)
-    label_nodes = {row["node_id"] for row in analysis["top10_degree_centrality"]}
+    top10 = [int(row["node_id"]) for row in analysis["top10_degree_centrality"]]
+    label_nodes = top10[:5]
 
-    fig, ax = plt.subplots(figsize=(14, 10.5), constrained_layout=True)
-    nx.draw_networkx_edges(graph, positions, ax=ax, edge_color="#9aa5b1", width=0.45, alpha=0.20)
+    fig, ax = plt.subplots(figsize=(8, 6.4), constrained_layout=True)
+    nx.draw_networkx_edges(graph, positions, ax=ax, edge_color="#9aa5b1", width=0.7, alpha=0.20)
     nx.draw_networkx_nodes(
         graph,
         positions,
@@ -244,13 +244,45 @@ def plot_network_analysis(
         linewidths=0.8,
         alpha=0.95,
     )
-    labels = {
-        node: f"{node} ({original_id[node]})" for node in label_nodes
-    }
-    nx.draw_networkx_labels(
-        graph, positions, labels=labels, ax=ax, font_size=7.5, font_color="#111111",
-        bbox=dict(boxstyle="round,pad=0.15", facecolor="white", edgecolor="none", alpha=0.75),
+    nx.draw_networkx_nodes(
+        graph,
+        positions,
+        ax=ax,
+        nodelist=top10,
+        node_color=[node_colors[node] for node in top10],
+        node_size=[node_sizes[node] for node in top10],
+        edgecolors="#111111",
+        linewidths=1.1,
+        alpha=0.98,
     )
+    center = np.mean(np.array(list(positions.values())), axis=0)
+    label_positions = {}
+    for node in label_nodes:
+        node_position = np.array(positions[node])
+        direction = node_position - center
+        distance = np.linalg.norm(direction)
+        offset = 0.16 * direction / distance if distance else np.array([0.0, 0.16])
+        label_positions[node] = tuple(node_position + offset)
+    if 12 in label_positions:
+        x, y = label_positions[12]
+        label_positions[12] = (x, y + 0.045)
+    if 27 in label_positions:
+        x, y = label_positions[27]
+        label_positions[27] = (x, y - 0.045)
+    for node in label_nodes:
+        ax.annotate(
+            str(node),
+            xy=positions[node],
+            xytext=label_positions[node],
+            ha="center",
+            va="center",
+            fontsize=13,
+            fontweight="bold",
+            color="#111111",
+            bbox=dict(boxstyle="round,pad=0.2", facecolor="white", edgecolor="none", alpha=0.9),
+            arrowprops=dict(arrowstyle="-", color="#555555", linewidth=0.8, shrinkA=1, shrinkB=4),
+            zorder=6,
+        )
     handles = [
         plt.Line2D(
             [0], [0], marker="o", color="w", markerfacecolor=color, markersize=10,
@@ -259,24 +291,24 @@ def plot_network_analysis(
         for name, color in colors.items()
     ]
     ax.legend(
-        handles=handles, title="Department", loc="lower left", frameon=True, fontsize=9,
-        title_fontsize=9,
+        handles=handles, title="Department", loc="lower left", frameon=True, fontsize=10.5,
+        title_fontsize=10.5,
     )
     ax.set_title(
-        "SocioPatterns workplace contact network "
+        "SocioPatterns workplace contact network\n"
         f"({analysis['n_participants']} participants, {analysis['n_edges']} edges, "
         f"density={analysis['density']:.4f})",
-        fontsize=13,
+        fontsize=13.5,
     )
     ax.set_axis_off()
     ax.text(
         0.99,
         0.01,
-        "Node size proportional to degree. Labels: node ID (original participant ID).",
+        "Node size = degree; black outline = top 10; labels = five largest hubs (node IDs).",
         transform=ax.transAxes,
         ha="right",
         va="bottom",
-        fontsize=8,
+        fontsize=9.0,
         color="#444444",
     )
     path = Path(figures_dir) / "network_analysis.png"
