@@ -16,6 +16,9 @@ env/
 .DS_Store
 Thumbs.db
 
+# Final submission archive
+*_SNTP_Assignment03.zip
+
 # Editors
 .vscode/
 .idea/

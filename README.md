@@ -215,5 +215,6 @@ simulator is made.
 
 No functional assignment requirement is missing from this repository. The only
 external identifier not present in the supplied material is the student roll
-number; use it for the required outer folder/ZIP name
-`RollNumber_SNTP_Assignment03` when submitting.
+number. The prepared archive uses `23F3008` (inferred from the other assignment
+files in this workspace). If the official roll number differs, rename both the
+outer folder and the ZIP archive before submitting.
