@@ -160,9 +160,9 @@ The reported run used:
 
 On this machine the complete pipeline (six training runs, 800 evaluation
 episodes, figures, checks, and report generation) takes roughly **1.7-1.8
-minutes** (101.1 s in the reported run). Training alone averages about **8.4 s
-per MLP run** and **21.8 s per Transformer run**; greedy selection averages
-about **2.1 ms per MLP episode** and **4.3 ms per Transformer episode**. These
+minutes** (102.7 s in the reported run). Training alone averages about **8.3 s
+per MLP run** and **22.5 s per Transformer run**; greedy selection averages
+about **1.8 ms per MLP episode** and **4.5 ms per Transformer episode**. These
 numbers are machine-specific and are also recorded in
 `results/run_metadata.json` and the report.
 

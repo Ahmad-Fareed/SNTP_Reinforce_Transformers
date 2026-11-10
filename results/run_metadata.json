@@ -12,12 +12,12 @@
   "n_participants": 92,
   "n_edges": 755,
   "training_seconds": {
-    "reinforce_mlp_seed7": 8.351279600057751,
-    "reinforce_mlp_seed21": 8.301176599925384,
-    "reinforce_mlp_seed42": 8.450328100007027,
-    "reinforce_transformer_seed7": 23.484413400059566,
-    "reinforce_transformer_seed21": 21.816628300002776,
-    "reinforce_transformer_seed42": 20.007330500055104
+    "reinforce_mlp_seed7": 8.394438799936324,
+    "reinforce_mlp_seed21": 8.196464499924332,
+    "reinforce_mlp_seed42": 8.454182900022715,
+    "reinforce_transformer_seed7": 20.887294399901293,
+    "reinforce_transformer_seed21": 23.24505480006337,
+    "reinforce_transformer_seed42": 23.282153700012714
   },
-  "total_pipeline_seconds": 101.14947669999674
+  "total_pipeline_seconds": 102.68035069992766
 }

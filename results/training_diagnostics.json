@@ -1328,7 +1328,7 @@
     "finite_gradients": true,
     "max_gradient_norm_after_clip": 0.10315074771642685,
     "gradients_clipped_to_max": true,
-    "training_seconds": 8.351279600057751
+    "training_seconds": 8.394438799936324
   },
   {
     "method": "reinforce_mlp",
@@ -2659,7 +2659,7 @@
     "finite_gradients": true,
     "max_gradient_norm_after_clip": 0.08079984784126282,
     "gradients_clipped_to_max": true,
-    "training_seconds": 8.301176599925384
+    "training_seconds": 8.196464499924332
   },
   {
     "method": "reinforce_mlp",
@@ -3990,7 +3990,7 @@
     "finite_gradients": true,
     "max_gradient_norm_after_clip": 0.050889723002910614,
     "gradients_clipped_to_max": true,
-    "training_seconds": 8.450328100007027
+    "training_seconds": 8.454182900022715
   },
   {
     "method": "reinforce_transformer",
@@ -5321,7 +5321,7 @@
     "finite_gradients": true,
     "max_gradient_norm_after_clip": 0.21696780622005463,
     "gradients_clipped_to_max": true,
-    "training_seconds": 23.484413400059566
+    "training_seconds": 20.887294399901293
   },
   {
     "method": "reinforce_transformer",
@@ -6652,7 +6652,7 @@
     "finite_gradients": true,
     "max_gradient_norm_after_clip": 0.5977613925933838,
     "gradients_clipped_to_max": true,
-    "training_seconds": 21.816628300002776
+    "training_seconds": 23.24505480006337
   },
   {
     "method": "reinforce_transformer",
@@ -7983,6 +7983,6 @@
     "finite_gradients": true,
     "max_gradient_norm_after_clip": 0.3065508008003235,
     "gradients_clipped_to_max": true,
-    "training_seconds": 20.007330500055104
+    "training_seconds": 23.282153700012714
   }
 ]
