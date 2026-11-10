@@ -1,0 +1,104 @@
+{
+  "n_participants": 92,
+  "n_edges": 755,
+  "density": 0.18036311514572384,
+  "n_connected_components": 1,
+  "component_sizes": [
+    92
+  ],
+  "n_isolates": 0,
+  "mean_degree": 16.41304347826087,
+  "max_degree": 44,
+  "min_degree": 4,
+  "average_clustering": 0.4260317537699304,
+  "degree_centrality_sum": 16.593406593406595,
+  "top10_degree_centrality": [
+    {
+      "node_id": 84,
+      "original_id": 804,
+      "department": "DMCT",
+      "degree": 44,
+      "degree_centrality": 0.4835164835164835,
+      "clustering_coefficient": 0.2558139534883721
+    },
+    {
+      "node_id": 58,
+      "original_id": 311,
+      "department": "DSE",
+      "degree": 38,
+      "degree_centrality": 0.4175824175824176,
+      "clustering_coefficient": 0.283072546230441
+    },
+    {
+      "node_id": 14,
+      "original_id": 95,
+      "department": "DSE",
+      "degree": 32,
+      "degree_centrality": 0.3516483516483517,
+      "clustering_coefficient": 0.34274193548387094
+    },
+    {
+      "node_id": 12,
+      "original_id": 80,
+      "department": "DMCT",
+      "degree": 31,
+      "degree_centrality": 0.34065934065934067,
+      "clustering_coefficient": 0.3053763440860215
+    },
+    {
+      "node_id": 27,
+      "original_id": 134,
+      "department": "DMCT",
+      "degree": 30,
+      "degree_centrality": 0.32967032967032966,
+      "clustering_coefficient": 0.2896551724137931
+    },
+    {
+      "node_id": 9,
+      "original_id": 63,
+      "department": "SRH",
+      "degree": 28,
+      "degree_centrality": 0.3076923076923077,
+      "clustering_coefficient": 0.25132275132275134
+    },
+    {
+      "node_id": 45,
+      "original_id": 223,
+      "department": "DSE",
+      "degree": 28,
+      "degree_centrality": 0.3076923076923077,
+      "clustering_coefficient": 0.335978835978836
+    },
+    {
+      "node_id": 24,
+      "original_id": 123,
+      "department": "DSE",
+      "degree": 26,
+      "degree_centrality": 0.2857142857142857,
+      "clustering_coefficient": 0.27076923076923076
+    },
+    {
+      "node_id": 72,
+      "original_id": 662,
+      "department": "DSE",
+      "degree": 26,
+      "degree_centrality": 0.2857142857142857,
+      "clustering_coefficient": 0.40307692307692305
+    },
+    {
+      "node_id": 86,
+      "original_id": 826,
+      "department": "DISQ",
+      "degree": 26,
+      "degree_centrality": 0.2857142857142857,
+      "clustering_coefficient": 0.3230769230769231
+    }
+  ],
+  "department_counts": {
+    "DISQ": 15,
+    "DMCT": 26,
+    "DSE": 34,
+    "SFLE": 4,
+    "SRH": 13
+  }
+}

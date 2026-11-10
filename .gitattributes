@@ -1,0 +1,11 @@
+# Source and generated tables use normal LF line endings.
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.csv text eol=lf
+*.json text eol=lf
+
+# The supplied dataset package must keep its exact bytes (its SHA-256 hashes
+# are part of the assignment package).  Disable end-of-line conversion there.
+# This rule must come last so it overrides the general CSV/Markdown patterns.
+data/** -text
